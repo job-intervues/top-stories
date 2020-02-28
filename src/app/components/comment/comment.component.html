@@ -1,0 +1,12 @@
+<h1>{{post.title}} <small>({{post.url}})</small></h1>
+<h6>{{post.descendants}} points | by {{post.by}} {{post.time}} ago </h6>
+<h4 *ngIf="post.kids">{{post.kids.length}} comments</h4>
+<br>
+<br>
+<div *ngFor="let item of commentsArray; let i = index">
+  <div id="item-{{i}}">
+    <h6>by {{item.by}} {{item.time}} ago </h6>
+    <h5>{{item.text}}</h5>
+    <br>
+  </div>
+</div>

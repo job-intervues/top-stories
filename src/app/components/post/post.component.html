@@ -1,0 +1,6 @@
+<div *ngFor="let item of topStories">
+  <hr>
+  <h5><span style="color: #FF0000">{{item.descendants}}</span>   {{item.title}} <small>({{item.url}})</small></h5>
+  <h5>by {{item.by}} {{item.time}} ago | <a href="#" (click)="gotoCommentSection(item); $event.preventDefault();">{{item.kids? item.kids.length : 0}} comments</a></h5>
+</div>
+<div style="text-align: center"><a href="#" (click)="loadMorePost(); $event.preventDefault();">Load More </a> </div>
